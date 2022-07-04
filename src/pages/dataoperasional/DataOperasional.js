@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-export default function Tables() {
+export default function DataOperasional() {
   const classes = useStyles();
   return (
     <>
