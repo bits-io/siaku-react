@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
+import { Grid, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import MUIDataTable from "mui-datatables";
 
@@ -10,6 +10,7 @@ import Table from "../dashboard/components/Table/Table";
 
 // data
 import mock from "../dashboard/mock";
+import { useHistory } from "react-router-dom";
 
 const datatableData = [
   ["Joe James", "Example Inc.", "Yonkers", "NY"],
@@ -38,10 +39,18 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default function DataOperasional() {
+  let history = useHistory();
   const classes = useStyles();
   return (
     <>
-      <PageTitle title="Tables" />
+      <PageTitle title="Data Operasional" button={<Button
+      onClick={() => history.push('/app/importdataoperasional') }
+      variant="contained"
+      size="medium"
+      color="secondary"
+    >
+        Import Data
+    </Button>} />
       <Grid container spacing={4}>
         <Grid item xs={12}>
           <MUIDataTable

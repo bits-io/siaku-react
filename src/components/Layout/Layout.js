@@ -32,6 +32,7 @@ import Tables from "../../pages/tables";
 import Icons from "../../pages/icons";
 import Charts from "../../pages/charts";
 import DataOperasional from "../../pages/dataoperasional";
+import ImportDataOperasional from "../../pages/dataoperasional/ImportDataOperasional";
 
 // context
 import { useLayoutState } from "../../context/LayoutContext";
@@ -59,6 +60,7 @@ function Layout(props) {
               <Route path="/app/tables" component={Tables} />
               <Route path="/app/notifications" component={Notifications} />
               <Route path="/app/dataoperasional" component={DataOperasional} />
+              <Route path="/app/importdataoperasional" component={ImportDataOperasional} />
               <Route
                 exact
                 path="/app/ui"
